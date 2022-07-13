@@ -41,7 +41,7 @@ struct hashTable *find(int ikey){
 
 void insert(int ikey, int ival){
     struct hashTable* item = find(ikey);
-    if(item == NULL){
+    if (item == NULL){
         item = malloc(sizeof(struct hashTable));
         item->key = ikey;
         item->val = ival;
@@ -63,7 +63,7 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize) {
             *returnSize = 2;
             return ret;
         }
-        else{
+        else {
             insert(nums[i], i);
         }
     }
