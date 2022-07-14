@@ -17,3 +17,7 @@ More can be found in  [official documentation](https://troydhanson.github.io/uth
 ## Algorithms
 
 ### Sliding Windows
+
+### Partition
+
+### Binary Search
