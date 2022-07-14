@@ -21,3 +21,5 @@ More can be found in  [official documentation](https://troydhanson.github.io/uth
 ### Partition
 
 ### Binary Search
+
+### Dynamic Programming
