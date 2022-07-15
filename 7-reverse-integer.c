@@ -32,7 +32,7 @@ int reverse(int x){
                 if (y_digit[y_ind] > max_digit[y_ind]){
                     return 0;
                 }
-                else if (y_digit[y_ind] < min_digit[y_ind]){
+                else if (y_digit[y_ind] < max_digit[y_ind]){
                     break;
                 }    
             }
