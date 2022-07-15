@@ -124,6 +124,7 @@ int myAtoi(char *s){
 }
 */
 
+
 // automaton should be used with further reference to the above link
 int category(char c) {
     if (c == ' ') return 0;
