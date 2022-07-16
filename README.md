@@ -24,6 +24,8 @@ More can be found in  [official documentation](https://troydhanson.github.io/uth
 
 ### Binary Search
 
+### Divide and Conquer
+
 ### Dynamic Programming
 
 ### Automaton
