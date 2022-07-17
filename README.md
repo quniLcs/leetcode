@@ -2,6 +2,8 @@
 
 ## Data Structures
 
+### Array
+
 ### Linked Lists
 
 ### Hash Tables
@@ -14,6 +16,8 @@
 
 More can be found in  [official documentation](https://troydhanson.github.io/uthash/).
 
+### Graph
+
 ## Algorithms
 
 ### Sliding Windows
@@ -23,6 +27,10 @@ More can be found in  [official documentation](https://troydhanson.github.io/uth
 ### Partition
 
 ### Binary Search
+
+### Sort
+
+
 
 ### Divide and Conquer
 
