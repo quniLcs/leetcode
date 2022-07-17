@@ -30,7 +30,8 @@ More can be found in  [official documentation](https://troydhanson.github.io/uth
 
 ### Sort
 
-
+1. Define a compare function;
+2. Use `qsort` function.
 
 ### Divide and Conquer
 
