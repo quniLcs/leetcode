@@ -22,7 +22,7 @@ int **threeSum(int *nums, int numsSize, int *returnSize, int **returnColumnSizes
                     while (second < third && nums[first] + nums[second] + nums[third] > 0){
                         third--;
                     }
-                    if (second == third) {
+                    if (second == third){
                         break;
                     }
                     if (nums[first] + nums[second] + nums[third] == 0){
