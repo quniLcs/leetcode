@@ -47,7 +47,7 @@ struct ListNode *removeNthFromEnd(struct ListNode *head, int n){
     }
     second -> next = second -> next -> next;
 
-    struct ListNode *ans = dummy->next;
+    struct ListNode *ans = dummy -> next;
     free(dummy);
     return ans;
 }
