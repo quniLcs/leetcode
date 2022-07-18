@@ -6,6 +6,8 @@
 
 ### Linked Lists
 
+### Stack
+
 ### Hash Tables
 
 1. Include head file `uthash.h`;
