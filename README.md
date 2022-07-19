@@ -8,6 +8,12 @@
 
 ### Stack
 
+### Priority Queue
+
+1. Define index to children node;
+2. Define a function to heapify;
+3. Build the heap.
+
 ### Hash Tables
 
 1. Include head file `uthash.h`;
