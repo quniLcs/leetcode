@@ -5,7 +5,7 @@ char *countAndSay(int n){
     string[0] = "1";
 
     for (int i = 1; i < n; i++){
-        string[i] = (char*)malloc(sizeof(char) * 4462);
+        string[i] = (char*)malloc(sizeof(char) * 4500);
 
         int j = 0;
         int k = -2;
