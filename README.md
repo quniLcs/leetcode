@@ -52,3 +52,5 @@ More can be found in  [official documentation](https://troydhanson.github.io/uth
 1. Define the states;
 2. Define the state transferring matrix;
 3. Define the corresponding operations.
+
+### Depth-First Search
