@@ -42,7 +42,7 @@ int jump(int *nums, int numsSize){
 */
 
 
-// greedy algorithms with reference to
+// greedy algorithm with reference to
 // https://leetcode.cn/problems/jump-game-ii/solution/tiao-yue-you-xi-ii-by-leetcode-solution/
 /*
 int jump(int *nums, int numsSize){
