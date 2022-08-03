@@ -1,3 +1,6 @@
+// almost directly copied from
+// https://leetcode.cn/problems/maximum-subarray/solution/zui-da-zi-xu-he-by-leetcode-solution/
+
 #include<stdio.h>
 
 int max(int a, int b){
