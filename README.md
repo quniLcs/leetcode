@@ -28,6 +28,10 @@ More can be found in the  [official documentation](https://troydhanson.github.io
 
 ## Algorithms
 
+### Iteration
+
+### Recursion
+
 ### Sliding Windows
 
 ### Double Pointer
@@ -52,5 +56,3 @@ More can be found in the  [official documentation](https://troydhanson.github.io
 1. Define the states;
 2. Define the state transferring matrix;
 3. Define the corresponding operations.
-
-### Depth-First Search
