@@ -8,7 +8,9 @@
 
 ### Stack
 
-### Priority Queue
+### Queue
+
+### Heap
 
 1. Define index to children node;
 2. Define a function to heapify;
