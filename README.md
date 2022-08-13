@@ -10,6 +10,8 @@
 
 ### Queue
 
+## Tree
+
 ### Heap
 
 1. Define index to children node;
