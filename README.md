@@ -10,7 +10,7 @@
 
 ### Queue
 
-## Tree
+### Tree
 
 ### Heap
 
