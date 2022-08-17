@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<stbool.h>
+#include<stdbool.h>
 
 struct TreeNode {
     int val;
