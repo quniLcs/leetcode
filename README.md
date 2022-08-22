@@ -55,6 +55,10 @@ More can be found in the  [official documentation](https://troydhanson.github.io
 
 ### Greedy Algorithm
 
+### Breath-First Search
+
+### Depth-First Search
+
 ### Automaton
 
 1. Define the states;
