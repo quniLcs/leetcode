@@ -25,6 +25,11 @@ void constructLadders(struct GraphNode *curNode){
     if (curRemain == 0){
         memcpy(ans[ansSize], cur, sizeof(char*) * curSize);
         ansColumnSizes[ansSize] = curSize;
+        /*
+        for (int colIndex = 0; colIndex < curSize; colIndex += 1){
+            printf("%s\t", cur[colIndex]);
+        }
+        */
         ansSize += 1;
     }
     else{
@@ -38,9 +43,6 @@ void constructLadders(struct GraphNode *curNode){
 
 char ***findLadders(char *beginWord, char *endWord, char **wordList, int wordListSize, int *returnSize, int **returnColumnSizes){
     // initialize
-    ans = (char***)malloc(sizeof(char**) * 100);
-    ansColumnSizes = (int*)malloc(sizeof(int) * 100);
-    ansSize = 0;
     *returnSize = 0;
     
     // prepare the nodes
@@ -65,7 +67,7 @@ char ***findLadders(char *beginWord, char *endWord, char **wordList, int wordLis
             endIndex = curIndex;
         }
     }
-    if (endIndex == -1) return ans;
+    if (endIndex == -1) return NULL;
 
     // prepare the edges
     bool **edge = (bool**)malloc(sizeof(bool*) * nodesSize);
@@ -115,12 +117,25 @@ char ***findLadders(char *beginWord, char *endWord, char **wordList, int wordLis
         }
         head += 1;
     }
-    if (node[endIndex].distance == -1) return ans;
+    if (node[endIndex].distance == -1) return NULL;
 
     // construct
+    ans = (char***)malloc(sizeof(char**) * 100);
+    ansColumnSizes = (int*)malloc(sizeof(int) * 100);
+    ansSize = 0;
+
     curRemain = curSize = node[endIndex].distance + 1;
     cur = (char**)malloc(sizeof(char*) * curSize);
     constructLadders(&node[endIndex]);
+
+    /*
+    for (int rowIndex = 0; rowIndex < ansSize; rowIndex += 1){
+        for (int colIndex = 0; colIndex < ansColumnSizes[rowIndex]; colIndex += 1){
+            printf("%s\t", ans[rowIndex][colIndex]);
+        }
+        printf("\n");
+    }
+    */
 
     *returnColumnSizes = ansColumnSizes;
     *returnSize = ansSize;
@@ -143,10 +158,10 @@ void main(){
     int returnSize;
     int *returnColumnSizes;
 
-    char ***ans = findLadders(beginWord, endWord, wordList, wordListSize, &returnSize, &returnColumnSizes);
+    char ***result = findLadders(beginWord, endWord, wordList, wordListSize, &returnSize, &returnColumnSizes);
     for (int rowIndex = 0; rowIndex < returnSize; rowIndex += 1){
         for (int colIndex = 0; colIndex < returnColumnSizes[rowIndex]; colIndex += 1){
-            printf("%s\t", ans[rowIndex][colIndex]);
+            printf("%s\t", result[rowIndex][colIndex]);
         }
         printf("\n");
     }
