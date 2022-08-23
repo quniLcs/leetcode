@@ -123,6 +123,7 @@ char ***findLadders(char *beginWord, char *endWord, char **wordList, int wordLis
     ans = (char***)malloc(sizeof(char**) * 100);
     ansColumnSizes = (int*)malloc(sizeof(int) * 100);
     ansSize = 0;
+    // printf("Hello\n");
 
     curRemain = curSize = node[endIndex].distance + 1;
     cur = (char**)malloc(sizeof(char*) * curSize);
@@ -159,6 +160,11 @@ void main(){
     int *returnColumnSizes;
 
     char ***result = findLadders(beginWord, endWord, wordList, wordListSize, &returnSize, &returnColumnSizes);
+    
+    assert(returnSize == 2);
+    assert(returnColumnSizes[0] == 5);
+    assert(returnColumnSizes[1] == 5);
+    
     for (int rowIndex = 0; rowIndex < returnSize; rowIndex += 1){
         for (int colIndex = 0; colIndex < returnColumnSizes[rowIndex]; colIndex += 1){
             printf("%s\t", result[rowIndex][colIndex]);
