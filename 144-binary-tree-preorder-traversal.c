@@ -10,8 +10,8 @@ int ansSize;
 void preorderTraversalRecursively(struct TreeNode *root){
     if (root){
         ans[ansSize++] = root -> val;
-        preorderTraversalRecursively(root  ->  left);
-        preorderTraversalRecursively(root  ->  right);
+        preorderTraversalRecursively(root -> left);
+        preorderTraversalRecursively(root -> right);
     }
 }
 
