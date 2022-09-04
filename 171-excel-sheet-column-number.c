@@ -2,10 +2,15 @@
 
 int titleToNumber(char *columnTitle){
     int columnNumber = 0;
-    for (int index = strlen(columnTitle) - 1, exp = 1; index >= 0; index -= 1){
-        exp *= 26;
+
+    int index = strlen(columnTitle) - 1;
+    long exp = 1;
+    while (index >= 0){
         columnNumber += (columnTitle[index] - '@') * exp;
+        index -= 1;
+        exp *= 26;
     }
+    
     return columnNumber;
 }
 
