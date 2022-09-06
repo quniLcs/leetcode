@@ -43,15 +43,15 @@ char *largestNumber(int *nums, int numsSize){
         strSize += j;
         // printf("%s\n", strs[i]);
     }
+    
+    qsort((void*)strs, (size_t)numsSize, sizeof(char*), compare);
+    if (strs[0][0] == '0' && strs[0][1] == '\0') return "0";
 
     char *str = (char*)malloc(sizeof(char) * strSize);
-    qsort((void*)strs, (size_t)numsSize, sizeof(char*), compare);
-
     for (int i = 0, j = 0; i < numsSize; j += strlen(strs[i]), i += 1){
         // printf("%s\n", strs[i]);
         strcpy(str + j, strs[i]);
     }
-
     return str;
 }
 
