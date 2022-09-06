@@ -1,7 +1,20 @@
 #include<stdio.h>
 
 int compare(const void *a, const void *b){
-    return -strcmp(*(char**)a, *(char**)b);
+    int n = strlen(*(char**)a);
+    int m = strlen(*(char**)b);
+    char *s = (char*)malloc(sizeof(char) * (m + n + 1));
+    char *t = (char*)malloc(sizeof(char) * (m + n + 1));
+
+    strcpy(s, *(char**)a);
+    strcpy(t, *(char**)b);
+    strcpy(s + n, *(char**)b);
+    strcpy(t + m, *(char**)a);
+
+    int c = -strcmp(s, t);
+    free(s);
+    free(t);    
+    return c;
 }
 
 char *largestNumber(int *nums, int numsSize){
@@ -43,14 +56,11 @@ char *largestNumber(int *nums, int numsSize){
 }
 
 void main(){
-    int numsSize = 5;
+    int numsSize = 2;
     int *nums = (int*)malloc(sizeof(int) * numsSize);
 
-    nums[0] = 3;
-    nums[1] = 30;
-    nums[2] = 34;
-    nums[3] = 5;
-    nums[4] = 9;
+    nums[0] = 0;
+    nums[1] = 0;
 
     printf("%s\n", largestNumber(nums, numsSize));
 }
