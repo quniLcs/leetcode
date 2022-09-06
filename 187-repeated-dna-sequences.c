@@ -27,7 +27,7 @@ int hashEdit(char *s){
     else{
         item = (struct hashItem*)malloc(sizeof(struct hashItem));
         strcpy(item -> key, t);
-        printf("%s\n", item -> key);
+        // printf("%s\n", item -> key);
         item -> val = 1;
         HASH_ADD_STR(hashTable, key, item);
     }
