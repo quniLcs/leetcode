@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<stdbool.h>
 
-typedef struct{
+typedef struct WordDictionary{
     bool flag;
-    WordDictionary *next[26];
+    struct WordDictionary *next[26];
 }
 WordDictionary;
 
