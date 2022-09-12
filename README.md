@@ -18,7 +18,7 @@
 2. Define a function to heapify;
 3. Build the heap.
 
-### Hash Tables
+### Hash Table
 
 1. Include the head file `uthash.h`;
 2. Define a structure including a `UT_hash_handle` often named as `hh`;
