@@ -23,13 +23,9 @@ void constructLadders(struct GraphNode *curNode){
     cur[curRemain] = curNode->word;
 
     if (curRemain == 0){
+        ans[ansSize] = (char**)malloc(sizeof(char*) * curSize);
         memcpy(ans[ansSize], cur, sizeof(char*) * curSize);
         ansColumnSizes[ansSize] = curSize;
-        /*
-        for (int colIndex = 0; colIndex < curSize; colIndex += 1){
-            printf("%s\t", cur[colIndex]);
-        }
-        */
         ansSize += 1;
     }
     else{
@@ -123,20 +119,10 @@ char ***findLadders(char *beginWord, char *endWord, char **wordList, int wordLis
     ans = (char***)malloc(sizeof(char**) * 100);
     ansColumnSizes = (int*)malloc(sizeof(int) * 100);
     ansSize = 0;
-    // printf("Hello\n");
 
     curRemain = curSize = node[endIndex].distance + 1;
     cur = (char**)malloc(sizeof(char*) * curSize);
     constructLadders(&node[endIndex]);
-
-    /*
-    for (int rowIndex = 0; rowIndex < ansSize; rowIndex += 1){
-        for (int colIndex = 0; colIndex < ansColumnSizes[rowIndex]; colIndex += 1){
-            printf("%s\t", ans[rowIndex][colIndex]);
-        }
-        printf("\n");
-    }
-    */
 
     *returnColumnSizes = ansColumnSizes;
     *returnSize = ansSize;
@@ -161,9 +147,9 @@ void main(){
 
     char ***result = findLadders(beginWord, endWord, wordList, wordListSize, &returnSize, &returnColumnSizes);
     
-    // assert(returnSize == 2);
-    // assert(returnColumnSizes[0] == 5);
-    // assert(returnColumnSizes[1] == 5);
+    assert(returnSize == 2);
+    assert(returnColumnSizes[0] == 5);
+    assert(returnColumnSizes[1] == 5);
 
     for (int rowIndex = 0; rowIndex < returnSize; rowIndex += 1){
         for (int colIndex = 0; colIndex < returnColumnSizes[rowIndex]; colIndex += 1){
