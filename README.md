@@ -4,7 +4,7 @@
 
 ### Array
 
-### Linked Lists
+### Linked List
 
 ### Stack
 
